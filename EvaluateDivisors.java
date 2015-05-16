@@ -76,18 +76,18 @@ public class EvaluateDivisors {
     
     /**
      * Returns the solution provided K is prime.
-     * 
+     *
      * @param a A
      * @param b B
      * @param k K
-     * 
+     *
      * @return the solution
      */
     private static int primeSolution(long a, long b, int k) {
         int result = 0;
         
-        /* If K is prime and n has K divisors then n = p^(K - 1) for some prime p
-           (see README.txt for details). */
+        /* If K is prime and n has K divisors then n = p^(K - 1) for some prime
+           p (see README.txt for details). */
         int n = 2;
         while (Math.pow(n, k - 1) < a) {
             n++;
@@ -102,9 +102,9 @@ public class EvaluateDivisors {
     
     /**
      * Returns true if the given positive integer is prime.
-     * 
+     *
      * @param n a positive integer
-     * 
+     *
      * @return true if n is prime
      */
     private static boolean prime(int n) {
