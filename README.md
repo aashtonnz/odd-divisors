@@ -5,6 +5,10 @@
 
 Given integers 1 < A < B and K positive and odd, how many integers between A and B (inclusive) have exactly K divisors?
 
+### Usage
+
+Compile and enter `java ExpectedDivisors A B K` at the command line.
+
 ### The Algorithm
 
 We first check if K is prime. K is prime if it is not divisible by any integer 1 < n < K. We only need to ascend through integers n <= sqrt(K), otherwise K must have a divisor less than n, which would have already been found. If K is prime there is a more efficient algorithm as detailed in the next section.
