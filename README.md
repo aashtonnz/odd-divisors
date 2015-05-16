@@ -19,7 +19,6 @@ If the count of divisors of c equals K then the solution is incremented by one. 
 
 ### If K is Prime
 
-Consider any prime number K and suppose c > 1 has K divisors. Then, according to *http://en.wikipedia.org/wiki/Divisor* under *Further Notions and Facts*, K = (v1 + 1)(v2 + 1)(v3 + 1) ... (vn + 1), where c = p1^v1 * p2^
-v2 * p3^v3 * ... * pn^vn for primes p1, p2, p3, ..., pn. However, K is prime so we must have K = vi + 1, that is, vi = K - 1, for some 1 <= i <= n, and vj = 0 for j != i. Therefore c = pi^(K - 1) for some i.
+Consider any prime number K and suppose c > 1 has K divisors. We have K = (v1 + 1)(v2 + 1)(v3 + 1) ... (vn + 1), where c = p1^v1 * p2^v2 * p3^v3 * ... * pn^vn for primes p1, p2, p3, ..., pn (see under *Further Notions and Facts* at *http://en.wikipedia.org/wiki/Divisor*). However, K is prime so we must have K = vi + 1, for some 1 <= i <= n, that is, vi = K - 1 and vj = 0 for j != i. Therefore c = pi^(K - 1) for some i.
 
 Given the above, if K is prime we only need to count the number of primes p such that A <= p^(K - 1) <= B. Therefore we step through all integers n such that A <= n^(K - 1) <= B and if n is prime the solution is incremented.
